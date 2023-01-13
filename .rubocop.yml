@@ -1,0 +1,11 @@
+require:
+- rubocop-performance
+- rubocop-rake
+- rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable
+
+# https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml
+# For more information: https://docs.rubocop.org/rubocop/versioning.html
