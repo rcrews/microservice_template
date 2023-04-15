@@ -1,7 +1,7 @@
 # Microservice Template
 
 This proof of concept verifies that I can create a microservice using
-the latest versions of JRuby and Sinatra -- 9.4.0.0 and 3.0.5,
+the latest versions of JRuby and Sinatra -- 9.4.2.0 and 3.0.6,
 respectively -- for Apache Tomcat 9. (Tomcat 9 rather than 10 because
 the
 [Servlet 5.0 namespace change](https://jakarta.ee/specifications/servlet/5.0/jakarta-servlet-spec-5.0.html#change-log)
@@ -15,9 +15,9 @@ To get this going:
 Install JRuby:
 
 1. Install [RVM](https://rvm.io/).
-2. Add JRuby 9.4.0.0 to RVM
+2. Add JRuby 9.4.2.0 to RVM
 
-       rvm install jruby-9.4.0.0
+       rvm install jruby-9.4.2.0
 
 Clone the repo, and `cd` into it.
 You should see RVM create a gemset container for the project.
@@ -40,16 +40,16 @@ Add the gemspec file to the war:
 
 Deploy with Tomcat:
 
-1. Download [Tomcat 9](https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.zip) and unzip.
+1. Download [Tomcat 9](https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-9.0.73.tar.gz) and untar.
 2. Copy the war to Tomcat’s `webapps` directory:
 
-       cp microservice_template.war apache-tomcat-9.0.71/webapps
+       cp microservice_template.war apache-tomcat-9.0.73/webapps
 
 3. Start Tomcat:
 
-       apache-tomcat-9.0.71/bin/startup.sh
+       apache-tomcat-9.0.73/bin/startup.sh
 
 Verify:
 
     open http://127.0.0.1:8080/microservice_template/frank-says
-    curl -Iv http://127.0.0.1:8080/microservice_template/frank-says
+    curl -v http://127.0.0.1:8080/microservice_template/frank-says

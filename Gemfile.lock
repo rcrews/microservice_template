@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/jruby/warbler
-  revision: 99b4c001c53c2589302b8f5ce2db03d9f2d1cd55
+  remote: https://github.com/jruby/warbler.git
+  revision: a2276924ac8a643741df18d8f9900a5248fad353
   branch: master
   specs:
     warbler (2.0.5)
@@ -13,7 +13,9 @@ PATH
   remote: .
   specs:
     microservice_template (0.1.0)
-      sinatra (~> 3.0, >= 3.0.5)
+      sinatra (~> 3.0, >= 3.0.6)
+      sinatra-contrib (~> 3.0, >= 3.0.6)
+      sinatra-cors (~> 1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -22,16 +24,17 @@ GEM
     coderay (1.1.3)
     diff-lcs (1.5.0)
     docile (1.4.0)
-    jruby-jars (9.4.0.0)
+    jruby-jars (9.4.2.0)
     jruby-rack (1.1.22)
     json (2.6.3-java)
+    multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     parallel (1.22.1)
     parser (3.2.0.0)
       ast (~> 2.4.1)
     rack (2.2.5)
-    rack-protection (3.0.5)
+    rack-protection (3.0.6)
       rack
     rainbow (3.1.1)
     rake (13.0.6)
@@ -78,11 +81,18 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    sinatra (3.0.5)
+    sinatra (3.0.6)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
-      rack-protection (= 3.0.5)
+      rack-protection (= 3.0.6)
       tilt (~> 2.0)
+    sinatra-contrib (3.0.6)
+      multi_json
+      mustermann (~> 3.0)
+      rack-protection (= 3.0.6)
+      sinatra (= 3.0.6)
+      tilt (~> 2.0)
+    sinatra-cors (1.2.0)
     tilt (2.0.11)
     unicode-display_width (2.4.2)
     webrick (1.7.0)
@@ -91,9 +101,11 @@ GEM
 
 PLATFORMS
   universal-java-19
+  universal-java-20
 
 DEPENDENCIES
   coderay
+  microservice_template!
   rake
   rspec
   rubocop
@@ -101,12 +113,11 @@ DEPENDENCIES
   rubocop-rake
   rubocop-rspec
   simplecov
-  microservice_template!
-  warbler (= 2.0.5)!
+  warbler!
   yard
 
 RUBY VERSION
-   ruby 3.1.0p0 (jruby 9.4.0.0)
+   ruby 3.1.0p0 (jruby 9.4.2.0)
 
 BUNDLED WITH
-   2.4.3
+   2.4.12
