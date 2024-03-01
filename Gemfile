@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in microservice_template.gemspec
 gemspec
 
-ruby '3.1.0', engine: 'jruby', engine_version: '9.4.2.0'
+ruby '3.1.4', engine: 'jruby', engine_version: '9.4.6.0'
 
 group :development do
   gem 'coderay', require: false
